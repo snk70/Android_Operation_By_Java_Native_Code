@@ -31,7 +31,7 @@ const App = () => {
       <Button
         title="Click"
         onPress={() => {
-          CalendarModule.createCalendarEvent('testName', 'testLocation');
+          CalendarModule.sinaEvent('testName');
         }}></Button>
     </View>
   );
