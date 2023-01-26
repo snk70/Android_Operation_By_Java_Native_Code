@@ -35,11 +35,11 @@ public class CalendarModule extends ReactContextBaseJavaModule {
     @ReactMethod(isBlockingSynchronousMethod = true)
     public void sinaEvent(String msg) {
 
-        MyService.isPlaying = true;
-//        startService(new Intent(MainActivity.this, MyService.class));
-        getCurrentActivity().startService(new Intent(getCurrentActivity(), MyService.class));
+//        getCurrentActivity().startService(new Intent(getCurrentActivity(), MyService.class));
+        MyService.StartTheService(getCurrentActivity(), "Sallam");
 
         Toast.makeText(getCurrentActivity(), msg, Toast.LENGTH_SHORT).show();
+
     }
 
 }
