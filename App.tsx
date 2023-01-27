@@ -31,7 +31,13 @@ const App = () => {
       <Button
         title="Click"
         onPress={() => {
-          CalendarModule.sinaEvent('testName');
+          CalendarModule.createCalendarEvent('testName', 'dgdf');
+        }}></Button>
+
+      <Button
+        title="Click"
+        onPress={() => {
+          CalendarModule.stopEvent('testName');
         }}></Button>
     </View>
   );
