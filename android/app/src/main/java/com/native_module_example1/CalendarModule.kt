@@ -19,7 +19,19 @@ class CalendarModule(reactContext: ReactApplicationContext) :
     fun createCalendarEvent(name: String, location: String) {
         Log.d("CalendarModule", "Create event called with name: $name and location: $location")
 
-        Toast.makeText(reactApplicationContext, "gfhfghghj", Toast.LENGTH_SHORT)
+        Toast.makeText(currentActivity, "gfhfghghj", Toast.LENGTH_SHORT).show()
+
+        MyService.startService(reactApplicationContext, "sdfsdf")
+
+
+    }
+
+
+    @ReactMethod(isBlockingSynchronousMethod = true)
+    fun changeEvent(vl: Int) {
+        Toast.makeText(reactApplicationContext, "Added...", Toast.LENGTH_SHORT)
+//        MyService.s_num =MyService.s_num+1
+        MyService.s_num++
     }
 
 }

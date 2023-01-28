@@ -13,9 +13,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:theme="@style/AppTheme">
         <service
-            android:name=".CalendarModule"
+            android:name=".MyService"
             android:enabled="true"
             android:exported="true"></service>
+        <service
+            android:name=".CalendarModule"
+            android:enabled="true"
+            android:exported="true" />
 
         <activity
             android:name=".MainActivity"
